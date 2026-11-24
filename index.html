@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SocialSparks social media management dashboard." />
+  <title>SocialSparks — Social Media Workspace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="SocialSparks home">
+        <span class="brand-mark">✳</span><span>social<span class="brand-light">sparks</span></span>
+      </a>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="nav">
+        <button class="nav-link active" data-view="overview"><span>◫</span> Overview</button>
+        <button class="nav-link" data-view="planner"><span>▦</span> Content planner <em>4</em></button>
+        <button class="nav-link" data-view="inbox"><span>✉</span> Social inbox <em class="inbox-count">8</em></button>
+        <button class="nav-link" data-view="analytics"><span>⌁</span> Analytics</button>
+        <button class="nav-link" data-view="library"><span>▧</span> Media library</button>
+      </nav>
+      <div class="workspace-label accounts-label">YOUR CHANNELS <button class="tiny-plus" title="Add channel">+</button></div>
+      <div class="channel"><span class="channel-icon instagram">◎</span><span>Instagram</span><i class="connected-dot"></i></div>
+      <div class="channel"><span class="channel-icon facebook">f</span><span>Facebook</span><i class="connected-dot"></i></div>
+      <div class="channel"><span class="channel-icon linkedin">in</span><span>LinkedIn</span><i class="connected-dot"></i></div>
+      <div class="channel"><span class="channel-icon xbrand">𝕏</span><span>X / Twitter</span><i class="connected-dot"></i></div>
+      <div class="sidebar-bottom">
+        <div class="help-card"><div class="help-icon">✦</div><strong>Need a hand?</strong><p>Explore tips to grow your social presence.</p><a href="#">Visit help centre →</a></div>
+        <button class="profile"><span class="avatar">CD</span><span><b>Chitransh Dagur</b><small>Free workspace</small></span><span class="profile-more">•••</span></button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+        <div class="breadcrumb">Workspace <span>/</span> <b id="pageCrumb">Overview</b></div>
+        <div class="top-actions"><span class="date-label" id="todayLabel"></span><button class="icon-button" title="Notifications">♧<i></i></button><button class="top-avatar">CD</button></div>
+      </header>
+
+      <section class="page active-page" id="overview">
+        <div class="welcome-row"><div><div class="eyebrow">MONDAY, YOUR SOCIALS ARE LOOKING GOOD ✨</div><h1>Good morning, Chitransh!</h1><p class="muted">Here’s what’s happening across your social channels.</p></div><button class="primary-btn" id="createPostBtn">＋ Create a post</button></div>
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-top"><span>Total audience</span><span class="stat-icon purple">♙</span></div><strong>24,860</strong><div class="stat-foot"><span class="positive">↗ 12.8%</span><span>vs. last month</span></div><div class="sparkline purple-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+          <article class="stat-card"><div class="stat-top"><span>Engagement rate</span><span class="stat-icon orange">♡</span></div><strong>5.42%</strong><div class="stat-foot"><span class="positive">↗ 2.4%</span><span>vs. last month</span></div><div class="sparkline orange-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+          <article class="stat-card"><div class="stat-top"><span>Post impressions</span><span class="stat-icon blue">◉</span></div><strong>186.4K</strong><div class="stat-foot"><span class="positive">↗ 18.6%</span><span>vs. last month</span></div><div class="sparkline blue-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+          <article class="stat-card"><div class="stat-top"><span>Published posts</span><span class="stat-icon green">▤</span></div><strong>38</strong><div class="stat-foot"><span class="positive">↗ 6 posts</span><span>vs. last month</span></div><div class="sparkline green-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+        </div>
+
+        <div class="content-grid">
+          <article class="panel performance-panel"><div class="panel-heading"><div><h2>Performance overview</h2><p class="muted">Track how your content is performing</p></div><select id="periodSelect" class="select"><option>Last 7 days</option><option>Last 30 days</option><option>Last 90 days</option></select></div>
+            <div class="chart-legend"><span><i class="legend-dot violet"></i> Reach</span><span><i class="legend-dot pale"></i> Engagement</span></div>
+            <div class="chart-wrap"><div class="y-labels"><span>20k</span><span>15k</span><span>10k</span><span>5k</span><span>0</span></div><div class="chart"><div class="grid-lines"><i></i><i></i><i></i><i></i><i></i></div><svg viewBox="0 0 700 220" preserveAspectRatio="none" role="img" aria-label="Performance line chart"><defs><linearGradient id="fillReach" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#7765e8" stop-opacity=".22"/><stop offset="100%" stop-color="#7765e8" stop-opacity="0"/></linearGradient></defs><path d="M0 175 C40 160 45 145 90 155 S145 125 185 140 S240 90 280 115 S335 120 370 92 S430 110 465 78 S525 95 560 55 S630 72 700 24 L700 220 L0 220Z" fill="url(#fillReach)"/><path d="M0 175 C40 160 45 145 90 155 S145 125 185 140 S240 90 280 115 S335 120 370 92 S430 110 465 78 S525 95 560 55 S630 72 700 24" fill="none" stroke="#7866e8" stroke-width="3" stroke-linecap="round"/><path d="M0 195 C45 185 55 190 90 180 S150 180 185 166 S240 170 280 155 S330 166 370 145 S430 158 465 135 S520 145 560 120 S635 135 700 105" fill="none" stroke="#b7b0ef" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 5"/></svg><div class="x-labels"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div></div></div>
+          </article>
+          <article class="panel channels-panel"><div class="panel-heading"><div><h2>Channel breakdown</h2><p class="muted">Audience by platform</p></div><button class="more-btn">•••</button></div><div class="donut-area"><div class="donut"><div><b>24.8K</b><small>Total followers</small></div></div><div class="channel-legend"><div><span><i class="legend-dot violet"></i> Instagram</span><b>48%</b></div><div><span><i class="legend-dot blue"></i> Facebook</span><b>26%</b></div><div><span><i class="legend-dot orange"></i> LinkedIn</span><b>16%</b></div><div><span><i class="legend-dot pale"></i> X / Twitter</span><b>10%</b></div></div></div></article>
+        </div>
+
+        <div class="content-grid lower-grid">
+          <article class="panel posts-panel"><div class="panel-heading"><div><h2>Upcoming posts</h2><p class="muted">Your content calendar at a glance</p></div><button class="text-btn" data-goto="planner">View calendar →</button></div><div class="post-row"><div class="post-thumb thumb-one">✦</div><div class="post-info"><b>5 ways to build a stronger brand</b><small><span class="mini-platform instagram">◎</span> Instagram · Today, 5:30 PM</small></div><span class="status scheduled">Scheduled</span></div><div class="post-row"><div class="post-thumb thumb-two">↗</div><div class="post-info"><b>What makes content memorable?</b><small><span class="mini-platform linkedin">in</span> LinkedIn · Tomorrow, 11:00 AM</small></div><span class="status draft">Draft</span></div><div class="post-row"><div class="post-thumb thumb-three">◈</div><div class="post-info"><b>Behind the scenes at SocialSparks</b><small><span class="mini-platform facebook">f</span> Facebook · Nov 28, 2:00 PM</small></div><span class="status scheduled">Scheduled</span></div></article>
+          <article class="panel activity-panel"><div class="panel-heading"><div><h2>Recent activity</h2><p class="muted">Latest updates from your workspace</p></div><button class="more-btn">•••</button></div><div class="activity-item"><span class="activity-icon violet-bg">♡</span><div><b>Engagement is up by 12%</b><p>Your Instagram audience is more active this week.</p><small>24 minutes ago</small></div></div><div class="activity-item"><span class="activity-icon green-bg">✓</span><div><b>Post published successfully</b><p>Your latest campaign post is now live.</p><small>2 hours ago</small></div></div><div class="activity-item"><span class="activity-icon orange-bg">✦</span><div><b>Weekly report is ready</b><p>Your performance summary is ready to view.</p><small>Yesterday</small></div></div></article>
+        </div>
+      </section>
+
+      <section class="page" id="planner"><div class="welcome-row"><div><div class="eyebrow">PLAN AHEAD</div><h1>Content planner</h1><p class="muted">Organise your ideas and keep every channel consistent.</p></div><button class="primary-btn" id="plannerCreate">＋ New post</button></div><div class="panel planner-panel"><div class="planner-toolbar"><button class="secondary-btn" id="prevWeek">←</button><h2 id="weekTitle">This week</h2><button class="secondary-btn" id="nextWeek">→</button><span class="spacer"></span><button class="secondary-btn">Week view⌄</button></div><div class="week-grid" id="weekGrid"></div></div></section>
+
+      <section class="page" id="inbox"><div class="welcome-row"><div><div class="eyebrow">STAY IN THE CONVERSATION</div><h1>Social inbox</h1><p class="muted">Manage comments and messages in one place.</p></div><button class="secondary-btn">All channels⌄</button></div><div class="panel inbox-panel"><div class="inbox-list"><div class="inbox-person selected"><span class="person-avatar pink">AS</span><div><b>Aria Sharma</b><p>Love this campaign! 🔥</p></div><small>9:42 AM</small></div><div class="inbox-person"><span class="person-avatar blue-bg">RK</span><div><b>Rohan Kapoor</b><p>Can you share the details?</p></div><small>Yesterday</small></div><div class="inbox-person"><span class="person-avatar green-bg">MP</span><div><b>Meera Patel</b><p>Such a helpful post.</p></div><small>Yesterday</small></div><div class="inbox-person"><span class="person-avatar yellow-bg">AV</span><div><b>Aditya Verma</b><p>Interested in your services.</p></div><small>Mon</small></div></div><div class="conversation"><div class="conversation-head"><span class="person-avatar pink">AS</span><div><b>Aria Sharma</b><small>Instagram · Comment on your post</small></div><span class="spacer"></span><button class="more-btn">•••</button></div><div class="message-date">TODAY</div><div class="message received">Love this campaign! The tips are super useful. 🔥</div><div class="message sent">Thank you, Aria! We're glad you found it helpful. ✨</div><div class="reply-box"><input id="replyInput" placeholder="Write a reply..." /><button class="primary-btn" id="sendReply">Send</button></div></div></div></section>
+
+      <section class="page" id="analytics"><div class="welcome-row"><div><div class="eyebrow">MAKE EVERY INSIGHT COUNT</div><h1>Analytics</h1><p class="muted">Understand your audience and improve your strategy.</p></div><button class="secondary-btn" id="exportReport">↓ Export report</button></div><div class="stats-grid compact-stats"><article class="stat-card"><div class="stat-top"><span>Reach</span><span class="stat-icon purple">◉</span></div><strong>186.4K</strong><div class="stat-foot"><span class="positive">↗ 18.6%</span><span>this period</span></div></article><article class="stat-card"><div class="stat-top"><span>Engagements</span><span class="stat-icon orange">♡</span></div><strong>13,290</strong><div class="stat-foot"><span class="positive">↗ 9.2%</span><span>this period</span></div></article><article class="stat-card"><div class="stat-top"><span>Link clicks</span><span class="stat-icon blue">↗</span></div><strong>4,820</strong><div class="stat-foot"><span class="positive">↗ 7.1%</span><span>this period</span></div></article><article class="stat-card"><div class="stat-top"><span>New followers</span><span class="stat-icon green">♙</span></div><strong>1,248</strong><div class="stat-foot"><span class="positive">↗ 14.3%</span><span>this period</span></div></article></div><div class="panel insight-panel"><h2>What your numbers are telling you</h2><div class="insight"><span class="insight-badge">✦</span><div><b>Instagram is your strongest channel</b><p>It contributes the largest share of your audience. Keep testing short-form video and carousel posts.</p></div></div><div class="insight"><span class="insight-badge blue-bg">◷</span><div><b>Your audience is most active in the evening</b><p>Try scheduling key posts between 5 PM and 7 PM and compare the results.</p></div></div></div></section>
+
+      <section class="page" id="library"><div class="welcome-row"><div><div class="eyebrow">YOUR CREATIVE HUB</div><h1>Media library</h1><p class="muted">Keep campaign visuals and brand assets organised.</p></div><label class="primary-btn upload-btn">↑ Upload media<input type="file" id="mediaUpload" accept="image/*" multiple hidden></label></div><div class="media-grid" id="mediaGrid"><div class="media-card media-a"><span>✦</span><b>Brand campaign</b><small>Social post · 2.4 MB</small></div><div class="media-card media-b"><span>◈</span><b>Product spotlight</b><small>Story · 1.8 MB</small></div><div class="media-card media-c"><span>✧</span><b>Team moments</b><small>Photo · 3.1 MB</small></div><div class="media-card media-d"><span>↗</span><b>Growth tips</b><small>Carousel · 2.0 MB</small></div></div></section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="postModal"><div class="modal"><div class="modal-head"><div><div class="eyebrow">CONTENT STUDIO</div><h2>Create a post</h2></div><button class="close-modal" id="closeModal">×</button></div><form id="postForm"><label>Post caption<textarea id="caption" rows="4" placeholder="What would you like to share with your audience?" required></textarea></label><div class="form-row"><label>Choose channel<select><option>Instagram</option><option>Facebook</option><option>LinkedIn</option><option>X / Twitter</option></select></label><label>Publish date<input type="date" id="publishDate" required></label></div><label>Post status<select><option>Save as draft</option><option>Schedule post</option></select></label><div class="modal-actions"><button type="button" class="secondary-btn" id="cancelModal">Cancel</button><button type="submit" class="primary-btn">Save post</button></div></form></div></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
